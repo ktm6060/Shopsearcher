@@ -1,0 +1,7 @@
+#
+# Settings for each menu.
+#
+# MY SHOP Menu
+myshop:
+  # Number of rows. (Default: 1)
+  size: 1
