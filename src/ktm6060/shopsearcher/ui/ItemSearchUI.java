@@ -50,7 +50,6 @@ public class ItemSearchUI extends GUI {
 	
 	public void clicked(Player player, int slot, ItemStack clicked, Inventory inv) {
 		if (clicked.getItemMeta().getDisplayName().equalsIgnoreCase(Utils.format("&CGo Back"))) {
-			//player.sendMessage(Utils.chat("&8[&6*&8] &6&lBack to ShopSearchMenuUI."));
 			player.openInventory(ShopSearchMenuUI.GUI(player));
 		}
 		else if (clicked.getItemMeta().getDisplayName().contains(Utils.format("Page ")))
