@@ -45,12 +45,13 @@ public class InventoryClickListener implements Listener {
 	}
 
 	private String trimStr(String str) {
-		if (str.contains("|")) {
-			str = str.substring(0,str.indexOf("r"));
+		String[] breakpoints = {"|", "("};
+		
+		for (int i = 0; i < breakpoints.length; i++) {
+			if (str.contains(breakpoints[i]))
+				return str.substring(0,str.indexOf(breakpoints[i]));
 		}
-		else if (str.contains("(")) {
-			str = str.substring(0,str.indexOf("("));
-		}
+		
 		return str;
 	}
 	
