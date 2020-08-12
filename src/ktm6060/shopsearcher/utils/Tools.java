@@ -452,14 +452,15 @@ public class Tools {
 	}
 	
 	public static void setPageSwitchingIcons(Inventory inv, int numPages, int currPage) {
+		int invSize = inv.getSize();
 		if (numPages > 1) {
 			if (currPage == 1)
-				Utils.createItem(inv, "writable_book", 1, 53, "&6Page " + (currPage + 1));
+				Utils.createItem(inv, "writable_book", 1, invSize-1, "&6Page " + (currPage + 1));
 			else if (currPage == numPages)
-				Utils.createItem(inv, "writable_book", 1, 45, "&6Page " + (currPage - 1));
+				Utils.createItem(inv, "writable_book", 1, invSize-9, "&6Page " + (currPage - 1));
 			else {
-				Utils.createItem(inv, "writable_book", 1, 53, "&6Page " + (currPage + 1));
-				Utils.createItem(inv, "writable_book", 1, 45, "&6Page " + (currPage - 1));
+				Utils.createItem(inv, "writable_book", 1, invSize-1, "&6Page " + (currPage + 1));
+				Utils.createItem(inv, "writable_book", 1, invSize-9, "&6Page " + (currPage - 1));
 			}
 		}
 	}

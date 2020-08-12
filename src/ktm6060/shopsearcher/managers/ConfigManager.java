@@ -63,7 +63,7 @@ public class ConfigManager {
 	private void buildMenusConfig() {
 		createMenusFile();
 		
-		menusConfig.addDefault("Search-By-Plot-Icon", "BARRIER");
+		menusConfig.addDefault("Search-By-Plot-Icon", "PAPER");
 		menusConfig.addDefault("Search-By-Item-Icon", "PAPER");
 		
 		menusConfig.options().copyDefaults(true);

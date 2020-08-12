@@ -10,6 +10,7 @@ import ktm6060.shopsearcher.ShopSearcher;
 import ktm6060.shopsearcher.factories.UIFactory;
 import ktm6060.shopsearcher.ui.ItemSearchUI;
 import ktm6060.shopsearcher.ui.MyShopUI;
+import ktm6060.shopsearcher.ui.PlotSearchUI;
 import ktm6060.shopsearcher.ui.ShopItemsUI;
 import ktm6060.shopsearcher.ui.ShopSearchMenuUI;
 
@@ -25,6 +26,8 @@ public class InventoryClickListener implements Listener {
 		
 		if(title.equals(trimStr(ShopSearchMenuUI.inventoryName)))
 			guiName = "ShopSearcherMenu";
+		else if(title.equals(trimStr(PlotSearchUI.inventoryName)))
+			guiName = "PlotSearch";
 		else if(title.equals(trimStr(ItemSearchUI.inventoryName)))
 			guiName = "ItemSearch";
 		else if(title.equals(trimStr(ShopItemsUI.inventoryName)))

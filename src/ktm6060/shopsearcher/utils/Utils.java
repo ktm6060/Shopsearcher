@@ -110,14 +110,14 @@ public class Utils {
 	
 	public static String convertToInvisibleString(String str) {
         String hidden = "";
-        for (char c : str.toCharArray()) hidden += ChatColor.COLOR_CHAR+""+c;
+        for (char c : str.toCharArray()) hidden += ChatColor.COLOR_CHAR + "" + c;
         return hidden;
     }
 	
 	public static String getStringAfterLastNum(String str) {
-		for (int i = str.length(); i >= 0; i--) {
+		for (int i = str.length()-1; i >= 0; i--) {
 			if (str.charAt(i) >= 48 && str.charAt(i) <= 57)
-				return str.substring(i+1);
+				return Utils.format(str.substring(i+1));
 		}
 		return str;
 	}

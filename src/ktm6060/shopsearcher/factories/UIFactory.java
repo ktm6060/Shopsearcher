@@ -3,6 +3,7 @@ package ktm6060.shopsearcher.factories;
 import ktm6060.shopsearcher.ui.GUI;
 import ktm6060.shopsearcher.ui.ItemSearchUI;
 import ktm6060.shopsearcher.ui.MyShopUI;
+import ktm6060.shopsearcher.ui.PlotSearchUI;
 import ktm6060.shopsearcher.ui.ShopItemsUI;
 import ktm6060.shopsearcher.ui.ShopSearchMenuUI;
 
@@ -11,6 +12,8 @@ public class UIFactory {
 		switch (invName) {
 		case "ShopSearcherMenu":
 			return new ShopSearchMenuUI();
+		case "PlotSearch":
+			return new PlotSearchUI();
 		case "ItemSearch":
 			return new ItemSearchUI();
 		case "ShopItems":

@@ -34,9 +34,12 @@ public class ShopSearchMenuUI extends GUI {
 	
 	public void clicked(Player player, int slot, ItemStack clicked, Inventory inv) {
 		if (clicked.getItemMeta().getDisplayName().contains(Utils.format("Search By Plot"))) {
-			//PlotSearchUI.setCurrPage(1);
-			//player.openInventory(PlotSearchUI.GUI(player));
-			player.sendMessage(Utils.format("&4Plot search not yet implemented."));
+			
+			//Bukkit.getConsoleSender().sendMessage(ConfigManager.getPlotsConfig().getString("NW.1"));
+			//Bukkit.getConsoleSender().sendMessage(ConfigManager.getPlotsConfig().getString("NW.15"));
+			
+			player.openInventory(PlotSearchUI.GUI(player));
+			//player.sendMessage(Utils.format("&4Plot search not yet implemented."));
 		} else if (clicked.getItemMeta().getDisplayName().contains(Utils.format("Search By Item"))) {
 			player.openInventory(ItemSearchUI.GUI(player, 1));
 		} else if (clicked.getItemMeta().getDisplayName().contains(Utils.format("My Shop"))) {

@@ -7,6 +7,7 @@ public class UserInterfaces {
 		GUI.initialize(plugin);
 		ItemSearchUI.initialize();
 		MyShopUI.initialize();
+		PlotSearchUI.initialize();
 		ShopItemsUI.initialize();
 		ShopSearchMenuUI.initialize();
 	}
