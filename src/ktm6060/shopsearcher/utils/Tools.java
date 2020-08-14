@@ -32,7 +32,6 @@ import ktm6060.shopsearcher.ui.ShopItemsUI;
 
 public class Tools {
 	
-	//private static ArrayList<ShopItem> allShopItems = new ArrayList<ShopItem>();
 	private static HashMap<Integer, ArrayList<ShopItem>> allShopItemsMap = new HashMap<Integer, ArrayList<ShopItem>>();
 	private static ShopSearcher plugin;
 	
@@ -298,7 +297,7 @@ public class Tools {
 		boolean updateItems = false;
 		Date date = new Date();
 		
-		//if no date has yet been recorded, updates once hour has changed (updates every hour)
+		//if no date has yet been recorded, updates once hour has changed
 		if (plugin.getConfig().getInt("lastScanned.year") == 0) {
 			updateItems = true;
 		} else {	
@@ -419,11 +418,11 @@ public class Tools {
 			if (itemsDisplayed >= 9) break;
 			shopItem = shopItems.get(i);
 			
-			//get floor and plot of owner
+			//get plot of owner
 			direction = "Plot ";
 			plot = 0;
 			for (int d = 0; d < directions.length; d++) {
-				if (d > 4)
+				if (d < 4)
 					numPlots = plugin.getConfig().getInt("numPlotsMain");
 				else
 					numPlots = plugin.getConfig().getInt("numPlotsTunnel");
@@ -576,23 +575,6 @@ public class Tools {
 		}
 		
 		return str;
-	}
-	
-	public static int plotPrice(int plot) {
-		switch (plot) {
-		case 1:
-		case 7:
-		case 13:
-		case 19:
-			return 48;
-		case 4:
-		case 10:
-		case 16:
-		case 22:
-			return 16;
-		default:
-			return 32;
-		}
 	}
 	
 	public static HashMap<Integer, ArrayList<ShopItem>> getAllShopItemsMap() {
